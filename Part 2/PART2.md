@@ -4,9 +4,9 @@
 
 No | ID         | Name                                        | Task descriptions | Contribution %
 -- | ---------- | ------------------------------------------- | ----------------- | --------------
-1  | 1211100415 |MUHAMMAD UMMAR HISHAM BIN AHMAD MADZLAN      |                   |
-2  | 1211101179 |ALIPH RAIHAN BIN ANUAR                       |                   |
-3  | 1211101643 |SIVAHARRIHARANN A/L RAMANATHAN               |                   |
+1  | 1211100415 |MUHAMMAD UMMAR HISHAM BIN AHMAD MADZLAN      |    Draw & Reset   |       40
+2  | 1211101179 |ALIPH RAIHAN BIN ANUAR                       |    Save & Load    |       30
+3  | 1211101643 |SIVAHARRIHARANN A/L RAMANATHAN               |    Score Tally    |       30
 
 
 ## B. Part 1 Feature Completion (Latest)
