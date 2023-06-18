@@ -194,6 +194,14 @@ public class Game {
                             // }
                             
                             break;
+
+                        case "r":
+
+                            resetGame();
+                            centerCards.add(deck.remove(0));
+                            break;
+
+                                
                         //No input 
                         case "":
                             System.out.println("Invalid Card. Please Try Again.");
@@ -303,6 +311,8 @@ public class Game {
                                         break;
                                     }
                             }
+
+                        
                 
                     } // END OF PLAYER INPUT
 
@@ -466,5 +476,23 @@ public class Game {
                 break;
         }
     }
-}
 
+    public void resetGame(){
+
+        deck.clear();
+
+        initializeDeck();
+
+        centerCards.clear();
+
+
+
+        currentTurn = 0;
+        prevTurn = 0;
+
+        trickNum = 1;
+
+       distributeCards();
+        
+    }
+}

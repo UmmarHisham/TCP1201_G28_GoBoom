@@ -2,11 +2,11 @@
 
 ## A. Member Contributions
 
-No | ID         | Name                                        | Task descriptions                                              | Contribution %
--- | ---------- | ------------------------------------------- | --------------------------------------------------------------- | -
-1  | 1211100415 |MUHAMMAD UMMAR HISHAM BIN AHMAD MADZLAN      | Coded the main logic for the game                               | 50
-2  | 1211101179 |ALIPH RAIHAN BIN ANUAR                       | Initialise player, deck, hand function. Save and load function. | 25
-3  | 1211101643 |SIVAHARRIHARANN A/L RAMANATHAN               | Coded the final decision for the game and score tally           | 25
+No | ID         | Name                                        | Task descriptions | Contribution %
+-- | ---------- | ------------------------------------------- | ----------------- | --------------
+1  | 1211100415 |MUHAMMAD UMMAR HISHAM BIN AHMAD MADZLAN      |                   |
+2  | 1211101179 |ALIPH RAIHAN BIN ANUAR                       |                   |
+3  | 1211101643 |SIVAHARRIHARANN A/L RAMANATHAN               |                   |
 
 
 ## B. Part 1 Feature Completion (Latest)
@@ -35,11 +35,11 @@ No | Feature                                                                    
    | until a card can be played.                                                      |         
 2  | When the remaining deck is exhausted and the player cannot play,                 |         Y
    | the player does not play in the trick.                                           |
-3  | Finish a round of game correctly. Display the score of each player.              |
-4  | Can exit and save the game (use file or database).                               |         P
-5  | Can resume the game. The state of the game is restored when resuming a game      |         
+3  | Finish a round of game correctly. Display the score of each player.              |         Y
+4  | Can exit and save the game (use file or database).                               |         Y
+5  | Can resume the game. The state of the game is restored when resuming a game      |         P
    | (use file or database).                                                          |
-6  | Reset the game. All scores become zero. Round and trick number restart from 1.   |
+6  | Reset the game. All scores become zero. Round and trick number restart from 1.   |         Y
 7  | Support GUI playing mode (cards should be faced up or down as in the real game). |         N
    | The GUI can be in JavaFX, Swing, Spring, or Android.                             |
 8  | Keep the console output to facilitate checking.                                  |         Y
