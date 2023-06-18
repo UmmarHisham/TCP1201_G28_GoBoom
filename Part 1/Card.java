@@ -26,7 +26,7 @@ public class Card {
             return 11;
         } else if (rank.equals("Q") ){
             return 12;
-        }else if (rank.equals("Q") ){
+        }else if (rank.equals("K") ){
             return 13;
         }else {
             return Integer.parseInt(rank);    
