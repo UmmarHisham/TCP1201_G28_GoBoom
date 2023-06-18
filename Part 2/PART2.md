@@ -2,11 +2,11 @@
 
 ## A. Member Contributions
 
-No | ID         | Name                                        | Task descriptions | Contribution %
--- | ---------- | ------------------------------------------- | ----------------- | --------------
-1  | 1211100415 |MUHAMMAD UMMAR HISHAM BIN AHMAD MADZLAN      |                   |
-2  | 1211101179 |ALIPH RAIHAN BIN ANUAR                       |                   |
-3  | 1211101643 |SIVAHARRIHARANN A/L RAMANATHAN               |                   |
+No | ID         | Name                                        | Task descriptions                                              | Contribution %
+-- | ---------- | ------------------------------------------- | --------------------------------------------------------------- | -
+1  | 1211100415 |MUHAMMAD UMMAR HISHAM BIN AHMAD MADZLAN      | Coded the main logic for the game                               | 50
+2  | 1211101179 |ALIPH RAIHAN BIN ANUAR                       | Initialise player, deck, hand function. Save and load function. | 25
+3  | 1211101643 |SIVAHARRIHARANN A/L RAMANATHAN               | Coded the final decision for the game and score tally           | 25
 
 
 ## B. Part 1 Feature Completion (Latest)
