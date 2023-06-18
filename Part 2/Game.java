@@ -1,7 +1,18 @@
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.*;
 
 public class Game {
     ArrayList<Card> deck;
+    ArrayList<Card> cards;
     ArrayList<Player> players;
     ArrayList<Card> centerCards;
     ArrayList< Map<Card, Player> > highestCard;
@@ -108,7 +119,81 @@ public class Game {
                         case "x":
                             System.exit(0);
                             break;
+
+                        case "s":
+
+                            try {
+                                //Write the data that you wish to save:
+                                //The cards of each player.
+                                //The centercards
+                                //The deck
+                                //The score 
+                                // SaveData data = new SaveData();
+                                SaveData dStorage = new SaveData();
+                                ResourceManager.save(dStorage, "1.save");
+                                // FileOutputStream fos = new FileOutputStream("SaveGameFile.dat");
+                                // BufferedOutputStream bos = new BufferedOutputStream(fos);
+                                // ObjectOutputStream oos = new ObjectOutputStream(bos);
+
+                                // SaveData dStorage = new SaveData();
+                                
+                                dStorage.cards = cards;
+                                dStorage.players = players;
+                                dStorage.deck = deck;
+                                dStorage.centerCards = centerCards;
+                                dStorage.highestCard = highestCard;
+                                dStorage.playedCard = playedCard;
+                                dStorage.movedCard = movedCard;
+    
+
+                                // oos.writeObject(dStorage);
+                                // oos.close();
+
+                                System.out.println(" -- Save successful! -- ");
+                            }
+                            catch (Exception ex){
+                                System.out.println(" -- Save unsuccessful! -- " + ex.getMessage()); 
+                                
+                            }
+                            break;
+
                         
+                        //Player loads
+                        case "l":
+                        //Load the data you last save.
+                        //Parse back the data.
+                            try {
+                                // FileInputStream fis = new FileInputStream("SaveGameFile.dat");
+                                // BufferedInputStream bis = new BufferedInputStream(fis);
+                                // ObjectInputStream ois = new ObjectInputStream(bis);
+
+                                // SaveData dStorage = (SaveData)ois.readObject();
+
+                                SaveData dStorage = (SaveData) ResourceManager.load("1.save");
+
+                                cards = dStorage.cards;
+                                players = dStorage.players;
+                                deck = dStorage.deck;
+                                centerCards = dStorage.centerCards;
+                                highestCard = dStorage.highestCard;
+                                playedCard = dStorage.playedCard;
+                                movedCard = dStorage.movedCard;
+
+                                // ois.close();
+
+                                System.out.println(" -- Load successful! -- ");
+
+                                
+                            }
+
+                            catch (Exception ex){
+                                System.out.println(" -- Load unsuccessful! -- " + ex.getMessage()); 
+                            }
+                            // catch(ClassNotFoundException ex){
+                            //     System.out.println(" -- Load unsuccessful! -- " + ex.getMessage());
+                            // }
+                            
+                            break;
                         //No input 
                         case "":
                             System.out.println("Invalid Card. Please Try Again.");
@@ -352,6 +437,7 @@ public class Game {
         System.out.print("Turn : Player " + (currentTurn + 1));
         System.out.println();
         // Get Player Input
+        System.out.println("Enter \"s\" to save or \"l\" to load up previous save");
         System.out.print("Play a card from your hand or \"d\" to draw a card. -> ");
 
     }
