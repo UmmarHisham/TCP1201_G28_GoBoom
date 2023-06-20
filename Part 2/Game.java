@@ -65,10 +65,12 @@ public class Game {
 
                 while (turnsPlayed < 4){
 
+                    System.out.println("\033[H\033[2J");
                     displayGame();
 
                     String playerInput = input.nextLine();
                     playerInput = playerInput.toLowerCase();
+
 
                     switch (playerInput){
 
