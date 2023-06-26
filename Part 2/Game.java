@@ -121,6 +121,9 @@ public class Game {
                             System.exit(0);
                             break;
 
+                        
+
+
                         case "s":
 
                             try {
@@ -202,6 +205,11 @@ public class Game {
                             centerCards.add(deck.remove(0));
                             break;
 
+                        case "c":
+
+                            contGame();
+                            centerCards.add(deck.remove(0));
+                            break;
                                 
                         //No input 
                         case "":
@@ -318,7 +326,7 @@ public class Game {
                     } // END OF PLAYER INPUT
 
                     if (players.get(prevTurn).hand.isEmpty()) {
-                        System.out.println("Player " + (players.indexOf(players.get(prevTurn)) + 1) + " Wins The Game");
+                        System.out.println("Player " + (players.indexOf(players.get(prevTurn)) + 1) + " Wins The Round");
                         endRound = true;
                         break;
                     }
@@ -448,7 +456,8 @@ public class Game {
         System.out.print("Turn : Player " + (currentTurn + 1));
         System.out.println();
         // Get Player Input
-        System.out.println("Enter \"s\" to save or \"l\" to load up previous save");
+        System.out.println("Enter \"s\" to save or \"l\" to load up previous save. Enter \"r\" to reset the game. ");
+        System.out.println("Enter \"r\" to reset the game or \"x\" to exit the game. ");
         System.out.print("Play a card from your hand or \"d\" to draw a card. -> ");
 
     }
@@ -478,6 +487,23 @@ public class Game {
         }
     }
 
+    public void contGame(){
+
+        deck.clear();
+
+        initializeDeck();
+
+        centerCards.clear();
+
+        currentTurn = 0;
+        prevTurn = 0;
+
+        trickNum = 1;
+
+       distributeCards();
+        
+    }
+
     public void resetGame(){
 
         deck.clear();
@@ -486,7 +512,9 @@ public class Game {
 
         centerCards.clear();
 
-
+        for (int i = 0; i < 4; i++) {
+            players.get(i).setScore(0);
+                }
 
         currentTurn = 0;
         prevTurn = 0;
